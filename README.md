@@ -27,7 +27,12 @@ https://www.lazyvim.org/keymaps
 
 # Other plugins
 
-Avante - https://github.com/yetone/avante.nvim
+Avante - https://github.com/yetone/avante.nvim  
+ * Add your OPENAI_KEY  
+
+```bash
+export OPENAI_API_KEY=YOUR_KEY
+```
 
 # Disabled plugins
 
