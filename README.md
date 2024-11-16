@@ -30,5 +30,10 @@ https://www.lazyvim.org/keymaps
 Avante - https://github.com/yetone/avante.nvim
 
 # Disabled plugins
-* whcih_key
-* persistence
+
+    * whcih_key
+    * persistence
+
+# Config
+
+    * conform.lua --> Added prettier and eslint support
