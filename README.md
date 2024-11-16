@@ -20,3 +20,15 @@ Execute neovim
 nvim
 ```
 
+# DOCS
+
+https://www.lazyvim.org/keymaps
+
+
+# Other plugins
+
+Avante - https://github.com/yetone/avante.nvim
+
+# Disabled plugins
+* whcih_key
+* persistence
