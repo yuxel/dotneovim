@@ -4,18 +4,19 @@
 --
 
 local tab_count = 0
+
 _G.HandleTab = function(direction)
   tab_count = tab_count + 1
   vim.defer_fn(function()
     if tab_count == 2 then
       if direction == "next" then
-        vim.cmd("bNext")
+        vim.cmd("tabnext")
       elseif direction == "prev" then
-        vim.cmd("bPrev")
+        vim.cmd("tabprev")
       end
     end
     tab_count = 0
-  end, 500) -- 300ms içinde iki kez basılmalı
+  end, 500) -- 500ms içinde iki kez basılmalı
 end
 
 vim.api.nvim_set_keymap("n", "<Tab>", [[:lua HandleTab('next')<CR>]], { noremap = true, silent = true })
@@ -24,4 +25,3 @@ vim.api.nvim_set_keymap("n", "<S-Tab>", [[:lua HandleTab('prev')<CR>]], { norema
 vim.api.nvim_set_keymap("n", "<C-t>", ":tabnew<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<C-e>", ":Neotree<CR>", { noremap = true, silent = true })
-
