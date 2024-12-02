@@ -15,6 +15,7 @@ return {
   opts = {
     formatters_by_ft = {
       javascript = { "prettier", "eslint" },
+      rust = { "rustfmt" },
     },
   },
 }
