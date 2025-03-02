@@ -15,6 +15,10 @@ return {
   opts = {
     formatters_by_ft = {
       javascript = { "prettier", "eslint" },
+      typescript = { "prettier", "eslint" },
+      css = { "prettier", "eslint" },
+      scss = { "prettier", "eslint" },
+      typescriptreact = { "prettier", "eslint" },
       rust = { "rustfmt" },
     },
   },

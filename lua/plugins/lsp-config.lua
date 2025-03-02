@@ -28,22 +28,23 @@ return {
     "neovim/nvim-lspconfig",
 
     lazy = false,
+    opts = {
+      servers = {
+        vtsls = false, -- vtsls'yi tamamen devre dışı bırak
+        tsserver = {}, -- Alternatif olarak tsserver kullan
+      },
+    },
     config = function()
       local lspconfig = require("lspconfig")
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local servers = {
         "lua_ls",
         "sqls",
+        "css",
+        "sass",
         "cssls",
         "ts_ls",
         "jsonls",
       }
-      for _, lsp in ipairs(servers) do
-        lspconfig[lsp].setup({
-          --- on_attach = on_attach,
-          capabilities = capabilities,
-        })
-      end
 
       local function should_ignore_message(message)
         -- vim.notify("Gelen mesaj: " .. message, vim.log.levels.INFO)
