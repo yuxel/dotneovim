@@ -20,7 +20,7 @@ return {
       scss = { "prettier", "eslint" },
       typescriptreact = { "prettier", "eslint" },
       rust = { "rustfmt" },
-      handlebars = { "ember-template-lint" },
+      handlebars = { "prettier" },
     },
   },
 }
